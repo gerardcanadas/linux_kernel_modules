@@ -36,14 +36,14 @@ static int init_filter_if(void)
   return 0;
 }
 
-static int __init netfilter_init(void)
+int __init netfilter_init(void)
 {
     printk(KERN_INFO "Hello world!\n");
     init_filter_if();
     return 0;    // Non-zero return means that the module couldn't be loaded.
 }
 
-static void __exit netfilter_cleanup(void)
+void __exit netfilter_cleanup(void)
 {
   nf_unregister_hook(&nfho);
   printk(KERN_INFO "[GS] Cleaning up netfilter module.\n");

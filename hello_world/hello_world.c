@@ -12,7 +12,7 @@ void hide_module(void)
 
 int init_module(void)
 {
-	hide_module();
+	//hide_module();
 	printk(KERN_INFO "[GS] hello world!");
 	return 0;
 }
